@@ -8,17 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>CSS知识梳理 | JulyFox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="四种CSS样式表的引入方式： 内部样式表 12345&lt;head&gt;&lt;style&gt;h1 &amp;#123;color: yellow;&amp;#125;&lt;&#x2F;style&gt;&lt;&#x2F;head&gt;  行内式 1&lt;div style&#x3D;&quot;color:red&quot;&gt;字体红色&lt;&#x2F;div&gt;  外部样式表    css外部引入的样式，空格也是占内存的 1&lt;link">
+  <meta name="description" content="四种CSS样式表的引入方式：内部样式表 12345&lt;head&gt;&lt;style&gt;h1 &amp;#123;color: yellow;&amp;#125;&lt;&#x2F;style&gt;&lt;&#x2F;head&gt;  行内式 1&lt;div style&#x3D;&quot;color:red&quot;&gt;字体红色&lt;&#x2F;div&gt;  外部样式表    css外部引入的样式，空格也是占内存的 1&lt;link h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS知识梳理">
 <meta property="og:url" content="http://yoursite.com/2020/03/28/CSS%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/index.html">
 <meta property="og:site_name" content="JulyFox">
-<meta property="og:description" content="四种CSS样式表的引入方式： 内部样式表 12345&lt;head&gt;&lt;style&gt;h1 &amp;#123;color: yellow;&amp;#125;&lt;&#x2F;style&gt;&lt;&#x2F;head&gt;  行内式 1&lt;div style&#x3D;&quot;color:red&quot;&gt;字体红色&lt;&#x2F;div&gt;  外部样式表    css外部引入的样式，空格也是占内存的 1&lt;link">
+<meta property="og:description" content="四种CSS样式表的引入方式：内部样式表 12345&lt;head&gt;&lt;style&gt;h1 &amp;#123;color: yellow;&amp;#125;&lt;&#x2F;style&gt;&lt;&#x2F;head&gt;  行内式 1&lt;div style&#x3D;&quot;color:red&quot;&gt;字体红色&lt;&#x2F;div&gt;  外部样式表    css外部引入的样式，空格也是占内存的 1&lt;link h">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:%5Cblog%5Cpublic%5Cimg%5Cboxs.png">
 <meta property="article:published_time" content="2020-03-28T07:31:08.000Z">
-<meta property="article:modified_time" content="2020-03-28T09:41:22.838Z">
+<meta property="article:modified_time" content="2020-03-28T14:25:55.903Z">
 <meta property="article:author" content="JulyFox">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:%5Cblog%5Cpublic%5Cimg%5Cboxs.png">
   
     <link rel="alternative" href="/atom.xml" title="JulyFox" type="application/atom+xml">
   
@@ -174,23 +176,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="四种CSS样式表的引入方式："><a href="#四种CSS样式表的引入方式：" class="headerlink" title="四种CSS样式表的引入方式："></a>四种CSS样式表的引入方式：</h4><ol>
-<li><p>内部样式表</p>
+        <h4 id="四种CSS样式表的引入方式："><a href="#四种CSS样式表的引入方式：" class="headerlink" title="四种CSS样式表的引入方式："></a>四种CSS样式表的引入方式：</h4><p>内部样式表</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">color</span>: yellow;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>行内式</p>
+
+<p>行内式</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style="color:red"&gt;字体红色&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>外部样式表    css外部引入的样式，空格也是占内存的</p>
+
+<p>外部样式表    css外部引入的样式，空格也是占内存的</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href="xxx.css" rel="stylesheet" type="text/css"&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>导入式</p>
+
+<p>导入式</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">	<span class="keyword">@import</span> <span class="string">"css文件路径"</span>;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<h4 id="标签显示模式display"><a href="#标签显示模式display" class="headerlink" title="标签显示模式display"></a>标签显示模式display</h4><ol>
-<li><p>块级元素</p>
+<h4 id="标签显示模式display"><a href="#标签显示模式display" class="headerlink" title="标签显示模式display"></a>标签显示模式display</h4><p>块级元素</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">h1</span>&gt;~&lt;<span class="selector-tag">h6</span>&gt; &lt;<span class="selector-tag">p</span>&gt; &lt;<span class="selector-tag">div</span>&gt; &lt;<span class="selector-tag">ul</span>&gt; &lt;<span class="selector-tag">ol</span>&gt; &lt;<span class="selector-tag">li</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>块级元素的特点：</p>
@@ -198,24 +196,95 @@
 <p>（2）高度，行高、外边距以及内边距都可以控制。</p>
 <p>（3）宽度默认是容器的100%</p>
 <p>（4）可以容纳内联元素和其他块元素。</p>
-</li>
-<li><p>行内元素</p>
+<p>行内元素</p>
 <p>不独占区域，靠自身字体大小和图像尺寸支撑结构</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">a</span>&gt; &lt;<span class="selector-tag">strong</span>&gt; &lt;<span class="selector-tag">b</span>&gt; &lt;<span class="selector-tag">em</span>&gt; &lt;<span class="selector-tag">i</span>&gt; &lt;<span class="selector-tag">del</span>&gt; &lt;<span class="selector-tag">s</span>&gt; &lt;<span class="selector-tag">ins</span>&gt; &lt;<span class="selector-tag">span</span>&gt; &lt;<span class="selector-tag">u</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <p>行内元素的特点：<br>（1）和相邻行内元素在一行上。<br>（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。<br>（3）默认宽度就是它本身内容的宽度。<br>（4）行内元素只能容纳文本或则其他行内元素。</p>
-</li>
-<li><p>行内块元素</p>
-</li>
-</ol>
+<p>行内块元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在行内元素中有几个特殊的标签——&lt;img &#x2F;&gt;、&lt;input &#x2F;&gt;、&lt;td&gt;，可以对它们设置宽高和对齐属性，有些资料可能会称它们为行内块元素。</span><br><span class="line"></span><br><span class="line">行内块元素的特点：</span><br><span class="line">（1）和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙。</span><br><span class="line">（2）默认宽度就是它本身内容的宽度。</span><br><span class="line">（3）高度，行高、外边距以及内边距都可以控制。</span><br></pre></td></tr></table></figure>
+
 <h4 id="CSS的三大特性：层叠性、继承性、优先级"><a href="#CSS的三大特性：层叠性、继承性、优先级" class="headerlink" title="CSS的三大特性：层叠性、继承性、优先级"></a>CSS的三大特性：层叠性、继承性、优先级</h4><p>​    css的继承性：子元素可以继承父元素的样式（<code>text-，font-，line-，color</code>）这类属性</p>
 <h4 id="CSS盒子模型（重点）"><a href="#CSS盒子模型（重点）" class="headerlink" title="CSS盒子模型（重点）"></a>CSS盒子模型（重点）</h4><p>​    CSS盒子由四大部分组成：content   padding    border    margin</p>
+<p><img src="D:%5Cblog%5Cpublic%5Cimg%5Cboxs.png" alt=""></p>
 <p>大多数浏览器，如Firefox、IE6及以上版本都采用了W3C规范，符合CSS规范的盒子模型的总宽度和总高度的计算原则是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盒子的总宽度&#x3D; width+左右内边距之和+左右边框宽度之和+左右外边距之和</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盒子的总高度&#x3D; height+上下内边距之和+上下边框宽度之和+上下外边距之和</span><br></pre></td></tr></table></figure>
 
-<h5 id="CSS3盒模型"><a href="#CSS3盒模型" class="headerlink" title="CSS3盒模型"></a>CSS3盒模型</h5><h4 id="CSS浮动（重点）"><a href="#CSS浮动（重点）" class="headerlink" title="CSS浮动（重点）"></a>CSS浮动（重点）</h4><h4 id="CSS定位（重点）"><a href="#CSS定位（重点）" class="headerlink" title="CSS定位（重点）"></a>CSS定位（重点）</h4><h4 id="重排和重绘"><a href="#重排和重绘" class="headerlink" title="重排和重绘"></a>重排和重绘</h4>
+<h5 id="CSS3盒模型"><a href="#CSS3盒模型" class="headerlink" title="CSS3盒模型"></a>CSS3盒模型</h5><p>CSS3中可以通过box-sizing 来指定盒模型，即可指定为content-box、border-box，这样我们计算盒子大小的方式就发生了改变。</p>
+<p>可以分成两种情况：</p>
+<p>1、box-sizing: border-box  盒子大小为 width </p>
+<p>2、box-sizing: content-box (默认) 盒子大小为 width + padding + border</p>
+<p>注：上面的标注的width指的是CSS属性里设置的width: length，content的值是会自动调整的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid gray;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>盒子阴影：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: 水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色 内/外阴影；</span><br></pre></td></tr></table></figure>
+
+<h4 id="CSS浮动（重点）"><a href="#CSS浮动（重点）" class="headerlink" title="CSS浮动（重点）"></a>CSS浮动（重点）</h4><p>CSS的定位机制有3种：标准流、浮动、定位</p>
+<p><strong>标准流</strong>实际上就是一个网页内标签元素正常从上到下，从左到右排列顺序的意思，比如块级元素会独占一行，行内元素会按顺序依次前后排列；按照这种大前提的布局排列之下绝对不会出现例外的情况叫做标准流布局。</p>
+<p><strong>浮动</strong>是指设置了浮动属性的元素会脱离标准普通流的控制，移动到其父元素中指定位置的过程</p>
+<p><strong>清除浮动</strong>：正常的标准流盒子，有高度的子盒子会撑开父盒子的高度；有float属性的子盒子不会撑开父盒子的高度，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让子盒子出去影响其他元素。</p>
+<p><strong>清除浮动的方法：</strong></p>
+<ul>
+<li><p>额外标签法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">是W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">”clear:both”</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>，或则其他标签br等亦可。</span><br></pre></td></tr></table></figure>
+
+<p>优点：通俗易懂，书写方便</p>
+<p>缺点：添加许多无意义的标签，结构化较差。</p>
+</li>
+<li><p>父级添加overflow属性方法</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">overflow: hidden|auto|scroll</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用after伪元素清除浮动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:afer</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"."</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">    *zoom: 1;   /* IE6、7 专有 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点： 符合闭合浮动思想  结构语义化正确</p>
+<p>缺点： 由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。</p>
+</li>
+<li><p>使用before和after双伪元素清除浮动</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123; </span><br><span class="line">  <span class="attribute">content</span>:<span class="string">"."</span>;</span><br><span class="line">  <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line"> <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  *zoom:1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="CSS定位（重点）"><a href="#CSS定位（重点）" class="headerlink" title="CSS定位（重点）"></a>CSS定位（重点）</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">position: static | relative | absolute | fixed;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>定位模式</th>
+<th>是否脱标占有位置</th>
+<th>是否可以使用边偏移</th>
+<th>移动位置基准</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>静态static</td>
+<td>不脱标，正常模式</td>
+<td>不可以</td>
+<td>正常模式</td>
+</tr>
+<tr>
+<td>相对定位relative</td>
+<td>不脱标，占有位置</td>
+<td>可以</td>
+<td>相对自身位置移动</td>
+</tr>
+<tr>
+<td>绝对定位absolute</td>
+<td>完全脱标，不占有位置</td>
+<td>可以</td>
+<td>相对于定位父级移动位置</td>
+</tr>
+<tr>
+<td>固定定位fixed</td>
+<td>完全脱标，不占有位置</td>
+<td>可以</td>
+<td>相对于浏览器移动位置</td>
+</tr>
+</tbody></table>
+
       
 
       
@@ -337,7 +406,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#四种CSS样式表的引入方式："><span class="toc-number">1.</span> <span class="toc-text">四种CSS样式表的引入方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标签显示模式display"><span class="toc-number">2.</span> <span class="toc-text">标签显示模式display</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS的三大特性：层叠性、继承性、优先级"><span class="toc-number">3.</span> <span class="toc-text">CSS的三大特性：层叠性、继承性、优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS盒子模型（重点）"><span class="toc-number">4.</span> <span class="toc-text">CSS盒子模型（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CSS3盒模型"><span class="toc-number">4.1.</span> <span class="toc-text">CSS3盒模型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS浮动（重点）"><span class="toc-number">5.</span> <span class="toc-text">CSS浮动（重点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS定位（重点）"><span class="toc-number">6.</span> <span class="toc-text">CSS定位（重点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重排和重绘"><span class="toc-number">7.</span> <span class="toc-text">重排和重绘</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#四种CSS样式表的引入方式："><span class="toc-number">1.</span> <span class="toc-text">四种CSS样式表的引入方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标签显示模式display"><span class="toc-number">2.</span> <span class="toc-text">标签显示模式display</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS的三大特性：层叠性、继承性、优先级"><span class="toc-number">3.</span> <span class="toc-text">CSS的三大特性：层叠性、继承性、优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS盒子模型（重点）"><span class="toc-number">4.</span> <span class="toc-text">CSS盒子模型（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CSS3盒模型"><span class="toc-number">4.1.</span> <span class="toc-text">CSS3盒模型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS浮动（重点）"><span class="toc-number">5.</span> <span class="toc-text">CSS浮动（重点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS定位（重点）"><span class="toc-number">6.</span> <span class="toc-text">CSS定位（重点）</span></a></li></ol>
                     </div>
                 </span>
             </div>
