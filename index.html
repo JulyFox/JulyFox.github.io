@@ -152,6 +152,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSS知识梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/28/CSS%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">CSS知识梳理</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/28/CSS%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/" class="archive-article-date">
+  	<time datetime="2020-03-28T07:31:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="四种CSS样式表的引入方式："><a href="#四种CSS样式表的引入方式：" class="headerlink" title="四种CSS样式表的引入方式："></a>四种CSS样式表的引入方式：</h4><ol>
+<li><p>内部样式表</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">color</span>: yellow;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>行内式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style="color:red"&gt;字体红色&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>外部样式表    css外部引入的样式，空格也是占内存的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href="xxx.css" rel="stylesheet" type="text/css"&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">	<span class="keyword">@import</span> <span class="string">"css文件路径"</span>;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="标签显示模式display"><a href="#标签显示模式display" class="headerlink" title="标签显示模式display"></a>标签显示模式display</h4><ol>
+<li><p>块级元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">h1</span>&gt;~&lt;<span class="selector-tag">h6</span>&gt; &lt;<span class="selector-tag">p</span>&gt; &lt;<span class="selector-tag">div</span>&gt; &lt;<span class="selector-tag">ul</span>&gt; &lt;<span class="selector-tag">ol</span>&gt; &lt;<span class="selector-tag">li</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>块级元素的特点：</p>
+<p>（1）总是从新行开始</p>
+<p>（2）高度，行高、外边距以及内边距都可以控制。</p>
+<p>（3）宽度默认是容器的100%</p>
+<p>（4）可以容纳内联元素和其他块元素。</p>
+</li>
+<li><p>行内元素</p>
+<p>不独占区域，靠自身字体大小和图像尺寸支撑结构</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">a</span>&gt; &lt;<span class="selector-tag">strong</span>&gt; &lt;<span class="selector-tag">b</span>&gt; &lt;<span class="selector-tag">em</span>&gt; &lt;<span class="selector-tag">i</span>&gt; &lt;<span class="selector-tag">del</span>&gt; &lt;<span class="selector-tag">s</span>&gt; &lt;<span class="selector-tag">ins</span>&gt; &lt;<span class="selector-tag">span</span>&gt; &lt;<span class="selector-tag">u</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>行内元素的特点：<br>（1）和相邻行内元素在一行上。<br>（2）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。<br>（3）默认宽度就是它本身内容的宽度。<br>（4）行内元素只能容纳文本或则其他行内元素。</p>
+</li>
+<li><p>行内块元素</p>
+</li>
+</ol>
+<h4 id="CSS的三大特性：层叠性、继承性、优先级"><a href="#CSS的三大特性：层叠性、继承性、优先级" class="headerlink" title="CSS的三大特性：层叠性、继承性、优先级"></a>CSS的三大特性：层叠性、继承性、优先级</h4><p>​    css的继承性：子元素可以继承父元素的样式（<code>text-，font-，line-，color</code>）这类属性</p>
+<h4 id="CSS盒子模型（重点）"><a href="#CSS盒子模型（重点）" class="headerlink" title="CSS盒子模型（重点）"></a>CSS盒子模型（重点）</h4><p>​    CSS盒子由四大部分组成：content   padding    border    margin</p>
+<p>大多数浏览器，如Firefox、IE6及以上版本都采用了W3C规范，符合CSS规范的盒子模型的总宽度和总高度的计算原则是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盒子的总宽度&#x3D; width+左右内边距之和+左右边框宽度之和+左右外边距之和</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盒子的总高度&#x3D; height+上下内边距之和+上下边框宽度之和+上下外边距之和</span><br></pre></td></tr></table></figure>
+
+<h5 id="CSS3盒模型"><a href="#CSS3盒模型" class="headerlink" title="CSS3盒模型"></a>CSS3盒模型</h5><h4 id="CSS浮动（重点）"><a href="#CSS浮动（重点）" class="headerlink" title="CSS浮动（重点）"></a>CSS浮动（重点）</h4><h4 id="CSS定位（重点）"><a href="#CSS定位（重点）" class="headerlink" title="CSS定位（重点）"></a>CSS定位（重点）</h4><h4 id="重排和重绘"><a href="#重排和重绘" class="headerlink" title="重排和重绘"></a>重排和重绘</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/28/CSS%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS数据结构——排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
